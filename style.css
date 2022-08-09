@@ -1,0 +1,305 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  body {
+    font-family: Arial, "Hiragino Kaku Gothic Pro W3", Meiryo, sans-serif;
+    background-color: #2d3042;
+    position: relative;
+    color: #efefef;
+    text-align: center;
+  }
+  body a, body a:visited {
+    color: #efefef;
+    text-decoration: none;
+  }
+  body a:hover {
+    color: #fff;
+  }
+  .slick-slide, .slick-slide::before, .caption {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  .slick-slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .main-slider {
+    position: relative;
+    width: 100%;
+    height: 38vw;
+    min-height: 8vw;
+    margin-bottom: 50px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 1.2s ease;
+  }
+  .main-slider.slick-initialized {
+    opacity: 1;
+    visibility: visible;
+  }
+  .slick-slide {
+    position: relative;
+    height: 38vw;
+  }
+  .slick-slide::before {
+    background-color: #000;
+    opacity: 0.3;
+    z-index: 1;
+  }
+  .slick-slide video {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+  }
+  .slick-slide iframe {
+    position: relative;
+    pointer-events: none;
+  }
+  .slick-slide figure {
+    position: relative;
+    height: 100%;
+  }
+  .slick-slide .slide-image {
+    opacity: 0;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.8s ease;
+  }
+  .slick-slide .slide-image.show {
+    opacity: 1;
+  }
+  .slick-slide .image-entity {
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .slick-slide .loading {
+    position: absolute;
+    top: 44%;
+    left: 0;
+    width: 100%;
+  }
+  .slick-slide .slide-media {
+    animation: slideOut 0.4s cubic-bezier(0.4, 0.29, 0.01, 1);
+  }
+  .slick-slide.slick-active {
+    z-index: 1;
+  }
+  .slick-slide.slick-active .slide-media {
+    animation: slideIn 2.4s cubic-bezier(0.4, 0.29, 0.01, 1);
+  }
+  .slick-slide.slick-active .caption {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.7s cubic-bezier(0.32, 0.34, 0, 1.62) 0.6s;
+  }
+  .caption {
+    position: absolute;
+    top: 44%;
+    left: 5%;
+    text-align: center;
+    padding: 20px;
+    border: 3px solid;
+    color: #fff;
+    margin: 0;
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 0.02em;
+    opacity: 0;
+    z-index: 1;
+    transition: all 0.3s ease;
+    transform: translateY(100px);
+  }
+  .slick-dots {
+    text-align: center;
+    padding-top: 15px;
+  }
+  .slick-dots li {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 8px;
+  }
+  .slick-dots li button {
+    width: 16px;
+    height: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 0 transparent;
+    vertical-align: middle;
+    color: #fff;
+    background-color: #fff;
+    transition: all 0.3s ease;
+    opacity: 0.4;
+  }
+  .slick-dots li button:focus {
+    outline: none;
+  }
+  .slick-dots li button:hover {
+    opacity: 1;
+  }
+  .slick-dots li.slick-active button {
+    border-color: #2d3042;
+    box-shadow: 0 0 0 2px #fff;
+    opacity: 1;
+  }
+  .container {
+    background-color: #f2f2f2;
+    color: #444;
+    line-height: 1.6;
+    padding: 40px 0;
+  }
+  .container .content {
+    width: 90%;
+    max-width: 980px;
+    margin: 0 auto;
+  }
+  .container p {
+    margin-bottom: 40px;
+  }
+  @keyframes slideIn {
+    from {
+      filter: blur(15px);
+    }
+    to {
+      filter: blur(0);
+    }
+  }
+  @keyframes slideOut {
+    from {
+      filter: blur(0);
+    }
+    to {
+      filter: blur(15px);
+    }
+  }
+  
+
+
+
+body{
+
+  background-color: #eee;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #495057;
+    background-color: transparent;
+    border-color: transparent;
+    border-bottom: 3px solid #000;
+     
+}
+
+.nav-tabs>li>a{
+
+  text-transform: uppercase;
+  color: #000;
+      font-weight: 500;
+}
+
+.nav-tabs .nav-link:hover {
+    border-color: transparent;
+    border-bottom: 3px solid #000
+}
+
+.navbar{
+
+      border-bottom: 1px solid #00000012;
+      padding-top: 0rem !important; 
+      padding-bottom: 0rem !important;
+          background-color: #ffffff!important;
+}
+
+.navbar-brand{
+
+  font-size: 24px;
+  text-transform: uppercase;
+  font-family: 'Allerta Stencil', sans-serif;
+  font-weight: 500;
+}
+
+.nav-tabs {
+    border-bottom: none;
+}
+
+.card{
+
+  border:none;
+ 
+}
+
+.card-body {
+    flex: 1 1 auto;
+    padding: 10px;
+}
+
+.card-text{
+
+  font-size: 13px;
+}
+
+.guarantee{
+
+  color: #05882c;
+  margin-left: 4px;
+  font-weight: 700
+
+}
+
+hr{
+    margin: 0.2rem 0;
+   color: #bfbebe;
+}
+
+.buttons button{
+
+  text-transform: uppercase;
+  font-size: 12px;
+  border-radius: 2px;
+}
+
+.udlite-btn-primary, .udlite-btn-primary.udlite-btn-disabled {
+    background-color: #1c1d1f;
+}.udlite-btn-primary, .udlite-btn-black-solid, .udlite-btn-white-outline, .udlite-btn-brand {
+    color: #fff;
+}.udlite-btn {
+    position: relative;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    min-width: 8rem;
+    padding: 0 1.2rem;
+    justify-content: center;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: bottom;
+    white-space: nowrap;
+}
+.udlite-btn-medium {
+    height: 2.5rem;
+}
+.header--gap-auth-button--7KoL0 {
+    margin-left: 0.8rem;
+}
+
+.udlite-btn-secondary, .udlite-btn-secondary.udlite-btn-disabled {
+    color: #1c1d1f;
+    background-color: transparent;
+    border: 1px solid #1c1d1f;
+}
